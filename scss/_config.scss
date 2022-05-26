@@ -1,0 +1,24 @@
+// Variables
+$website-width:1280px;
+$main-color:#FFB6C1;
+$light-color:#FADBD8;
+$medium-color:#f1948a;
+$dark-color:#333;
+$bg-image:url('../imgs/femhomenew\ final.jpeg');
+
+$fem-color:#ff0055;
+
+// Set text color
+@function set-text-color($color){
+  @if(lightness($color) > 50){
+    @return #000;
+  }@else{
+    @return #fff;
+  }
+}
+
+
+// .container{
+//   background-color:#eb7a8a;
+// }
+ 

@@ -1,0 +1,432 @@
+.container {
+  max-width: $website-width;
+  padding: 0 1.5rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+// Buttons
+%btn-shared{
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  transition: all 0.5s;
+  border:none;
+  cursor: pointer;
+}
+
+.main-front{
+  font-family: 'Staatliches', cursive;
+}
+
+.btn{
+  &-main{
+    @extend %btn-shared;
+    color: #333;
+    background-color:$main-color;
+  }
+  &-light{
+    @extend %btn-shared;
+    color: #333;
+    background-color:$light-color;
+  }
+  &-dark{
+    @extend %btn-shared;
+    color: #f4f4f4;
+    background-color:$dark-color;
+  }
+
+  &-block{
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+ 
+button[class^=btn-]:hover,
+a[class^=btn-]:hover,
+input[class^=btn-]:hover{
+ background-color: $main-color;
+}
+
+.section-title{
+  display: block;
+  text-align:center;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.lead{
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #f4f4f4;
+}
+.lead-dark{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.section-title{
+  font-size: 2rem;
+}
+
+.lead-big{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.l-heading{
+  font-size: 3rem;
+  text-align: center;
+}
+
+
+.text-center{
+  text-align: center;
+}
+
+.bottom-line{
+  height: 2px;
+  width: 3rem;
+  background: $main-color;
+  display: block;
+  margin: 0 auto 1rem auto;
+}
+
+// Paddings
+.py{
+  &-1{
+    padding: 1rem 0;
+  }
+  &-2{
+    padding: 2rem 0;
+  }
+  &-3{
+    padding: 3rem 0;
+  }
+  &-4{
+    padding: 4rem 0;
+  }
+}
+
+// Margins
+.my{
+  &-1{
+    margin: 1rem 0;
+  }
+  &-2{
+    margin: 2rem 0;
+  }
+  &-3{
+    margin: 3rem 0;
+  }
+  &-4{
+    margin: 4rem 0;
+  }
+}
+
+
+// Backgrounds
+.bg{
+  &-main{
+    background: $main-color;
+    color: set-text-color($main-color);
+  }
+  &-dark{
+    background: $dark-color;
+    color: set-text-color($dark-color);
+  }
+  &-light{
+    background: $light-color;
+    color: set-text-color($light-color);
+  }
+  &-medium{
+    background: $medium-color;
+    color: set-text-color($medium-color);
+  }
+}
+
+.category{
+  display: inline-block;
+  color: #fff;
+  font-size: .55rem;
+  text-transform: uppercase;
+  padding: 0.4rem 0.6rem;
+  border-radius: 15px;
+  margin-bottom: 0.5rem;
+}
+ 
+.category-fem{
+  color:#fff;
+  background-color:$fem-color;
+}
+
+.container-news{
+  max-width: $website-width;
+  padding: 0 2rem;
+  margin: auto;
+  overflow: hidden;
+}
+
+.card{
+  background: white;
+  padding: 1rem;
+  z-index: 100;
+}
+.card_article{
+  background:$light-color;
+  padding: 1rem;
+  z-index: 100;
+}
+
+// 3d border effect
+.border_pop{
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  padding: 1rem;
+}
+
+
+.news-dark{
+  background-color: $medium-color;
+  color: #333;
+}
+
+.news-main{
+  background-color: $main-color;
+  color: #333;
+}
+
+.list{
+  font-size: 1rem;
+}
+
+.bottom{
+  border-bottom: dotted black 1px;
+  margin: 1rem;
+}
+
+// news article containers outlet 
+.page-container{
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  margin: 2rem 0;
+  grid-gap: 1.5rem;
+}
+
+.page-container > *:first-child {
+  grid-row: 1 /span 3;
+}
+
+#article .meta{
+  display:flex;
+  justify-content:space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0.5rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+#article .meta .category{
+  margin-top: 0.4rem;
+}
+
+
+.mythie{
+  margin-top: 30px;
+}
+
+.truthi{
+  text-align: center;
+  margin-bottom: 0 !important;
+  font-size: 1.4rem;
+}
+
+// // Comment box 
+
+// #wrapper{
+//   margin: 3% auto;
+//   margin-top: 1%;
+//   width: 100%;
+//   max-width: $website-width;
+// }
+
+// #wrapper:hover{
+//   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
+
+// #hdcomments{
+//   border: 1px solid $medium-color;
+//   padding: 40px;
+//   border-radius: 5px;
+// }
+
+// .hdc_label{
+//   display: block;
+//   margin-bottom: 8px;
+// }
+
+// .hdc_input{
+//   width:97%;
+//   padding: 12px 16px;
+//   border: 1px solid #ccc;
+//   border-radius: 5px;
+//   font-family:'Dosis', sans-serif;
+// }
+
+// .input{
+//   font-family:'Dosis', sans-serif;
+// }
+
+// #hdc_comment_contact{
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-gap: 4rem;
+//   margin-top:20px;
+//   width: 98.5%;
+// }
+
+// #hdc_comment_footer{
+//   display: grid;
+//   align-items: center;
+//   margin-top: 40px;
+//   justify-content: center;
+// }
+
+// #hdc_reaction_title{
+//   display: inline-block;
+// }
+
+// .hdc_reaction{
+//   padding: 5px 10px;
+//   border: 1px solid transparent;
+//   border-radius: 10px;
+//   margin: 10px;
+//   font-size: 25px;
+//   cursor: pointer;
+// }
+
+// .hdc_reaction_selected{
+//   border: 1px solid #999;
+// }
+
+// .hdc_reaction_selected:hover{
+//   border: 1px solid #999 !important;
+// }
+
+// .hdc_reaction:hover{
+//   border: 1px solid $main-color;
+// }
+
+// .hdc_input:focus{
+//   outline-color: $main-color;
+// }
+
+// #hdc_submit{
+//   background: $main-color;
+//   opacity: 0.8;
+//   padding: 15px 50px;
+//   border: 2px solid transparent;
+//   border-radius: 5px;
+//   font-family:'Dosis', sans-serif;
+//   margin-top: 30px;
+//   font-size: 20px;
+//   cursor: pointer;
+// }
+
+// .hdc_submit_enabled{
+//   opacity: 1 !important;
+//   border: 2px solid black !important;
+//   color: black;
+// }
+
+// .hdc_submit_enabled:hover{
+//   box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+// }
+
+// #hdc_submit:focus{
+//   outline-color: $medium-color;
+// }
+
+
+// Comment viewing area 
+// #hdc_comments{
+//   margin-top: 40px;
+// }
+
+// .hdcomment{
+//   border: 4px solid #eee;
+//   border-bottom: 5px solid #ccc;
+//   border-radius:10px;
+//   padding: 20px;
+//   margin-bottom: 12px;
+// }
+
+// .hdc_comment p:first-child{
+//   margin-top:0;
+// }
+
+// .hdc_meta{
+//   display: grid;
+//   grid-template-columns: 1fr 80px;
+//   align-items: center;
+// }
+
+// .hdc_meta_date_author{
+//   font-size: 0.85rem;
+// }
+
+// .hdc_meta_author{
+//   font-size: 0.90rem;
+//   margin-left: 10px;
+// }
+
+// .comment_text{
+//  margin-bottom: 10px !important;
+// }
+
+// .hdc_vote{
+//   text-align: right;
+//   display: grid;
+//   grid-template-columns:1fr 25px;
+//   align-items: center;
+// }
+
+// .hdc_vote_options{
+//   display: grid;
+//   grid-auto-columns: 1fr;
+// }
+
+// .hdc_upvote{
+//   padding: 10px;
+//   padding-bottom:2px;
+//   cursor: pointer;
+// }
+
+// .hdc_downvote{
+//   padding: 10px;
+//   padding-top: 2px;
+//   cursor: pointer;
+// }
+
+// .hdc_vote_disabled{
+//   cursor: default;
+//   opacity: 0.4;
+// }
+
+// .hdc_vote_selected{
+//   opacity: 0.8;
+// }
+
+// .hdc_upvote.hdc_vote_selected{
+//   color: green;
+// }
+
+// .hdc_downvote.hdc_vote_selected{
+//   color: red;
+// }
+
+// Myth vs Thruth 
